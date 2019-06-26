@@ -24,7 +24,7 @@ class ApplicationController < Sinatra::Base
   post '/articles/new' do
     article = Article.new(:title => params["title"], :content => params["content"])
     article.save
-    redirect to '/articles'
+    redirect to "/articles/#{article.id}"
   end
 
   get '/articles/:id' do
