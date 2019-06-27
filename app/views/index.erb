@@ -1,5 +1,5 @@
 <ol>
 <% @articles.each do |article| %>
-  <a href="/articles/<%= article.id %>"><%= article.title %></a>
+  <li><a href="/articles/<%= article.id %>"><%= article.title %></a></li>
 <% end %>
 </ol>
