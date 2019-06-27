@@ -42,5 +42,5 @@ class ApplicationController < Sinatra::Base
     article.update(title: params["title"], content: params["content"])
     redirect "/article/#{article.id}"
   end
-  
+
 end
