@@ -1,6 +1,7 @@
 <h1> Change this Puppy</h1>
 <form action="/articles/<%= @article.id %>" method="POST">
   <input id="hidden" type="hidden" name="_method" value="patch">
-<p>Edit the Title <input type="text" name="title"/></p>
-<p>Edit the Content <input type="text" name="content"/></p>
+<p>Edit the Title</p> 
+<textarea name="title" rows="1" cols="40"><%= @article.title %></textarea>
+<p>Edit the Content:</p><textarea name="content"><%= @article.content %></textarea>
 </form>
