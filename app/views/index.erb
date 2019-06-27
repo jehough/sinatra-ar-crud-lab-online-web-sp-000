@@ -1,5 +1,9 @@
 <ol>
 <% @articles.each do |article| %>
   <li><a href="/articles/<%= article.id %>"><%= article.title %></a></li>
+  <form action="/articles/<%= article.id%>" method="post">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <input type="submit" value="Delete" id="delete"/>
+  </form>
 <% end %>
 </ol>
